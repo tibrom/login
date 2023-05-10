@@ -1,5 +1,5 @@
 const keycloakConfig = {
-  url: 'https://auth.extrabot.ru/auth',
+  url: 'https://user.extrabot.ru/auth',
   realm: 'user_crm',
   clientId: 'open_client',
 };
