@@ -1,7 +1,7 @@
 const keycloakConfig = {
   url: 'https://user.extrabot.ru/auth',
-  realm: 'user_crm',
-  clientId: 'open_client',
+  realm: 'new_crm',
+  clientId: 'client',
 };
 
 async function generateCodeChallenge(codeVerifier) {
@@ -73,7 +73,7 @@ async function getUserInfo(accessToken) {
   console.log('accessToken');
   console.log(accessToken);
   const url =
-    'https://auth.extrabot.ru/auth/realms/user_crm/protocol/openid-connect/userinfo';
+    'https://user.extrabot.ru/auth/realms/new_crm/protocol/openid-connect/userinfo';
   const response = await fetch(url, {
     headers: {
       Authorization: `Bearer ${accessToken}`,
